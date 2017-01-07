@@ -1,0 +1,55 @@
+.slide-menu {
+  padding: 20px;
+}
+.logo-vv {
+  padding: 15px;
+}
+
+nav ul li ul:hover {
+    transition-delay:1s;
+}
+
+.menu-item-has-children {
+  overflow: hidden;
+}
+.menu-item-has-children  > .sub-menu{
+    padding:0 12px;
+        display:block;
+        transform:translateX(-200%);
+        height:0;
+        opacity:0;
+       overflow: hidden;
+      transition: all 0.5s 0.3s cubic-bezier(0.52, 0.55, 0.55, 1);
+
+    }
+.menu-hover-behavior {
+
+  height:auto;
+  opacity:1;
+  transform:translateX(0%);
+  transition: all 0.5s 0.3s cubic-bezier(0.52, 0.55, 0.55, 1);
+  li .sub-menu {
+    transform:translateX(-200%);
+    height:0;
+    transition: all 0.5s cubic-bezier(0.52, 0.55, 0.55, 1);
+    padding:6px;
+    a{
+      color:white;
+    }
+  }
+  .menu-item-has-children:hover {
+    .sub-menu {
+      height:auto;
+      transform:translateX(0%);
+      transition: all 0.5s 0.3s cubic-bezier(0.52, 0.55, 0.55, 1);
+    }
+  }
+
+}
+@include media($tablet-portrait){
+  .menu-item-has-children:target {
+  }
+}
+ .menu-item-has-children:hover {
+  //  @extend .menu-hover-behavior;
+}
