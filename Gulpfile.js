@@ -335,7 +335,7 @@ gulp.task( 'watch', function () {
 	browserSync( {
 		'open': false,             // Open project in a new tab?
 		'injectChanges': true,     // Auto inject changes instead of full reload.
-		'proxy': 'http://localhost:8888/voilarts',    // Use https://webdevstudios.com/:3000 to use BrowserSync.
+		'proxy': 'http://localhost:8880/voilarts',    // Use https://webdevstudios.com/:3000 to use BrowserSync.
 		'watchOptions': {
 			'debounceDelay': 1000  // Wait 1 second before injecting.
 		}
